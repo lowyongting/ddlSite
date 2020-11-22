@@ -1,0 +1,236 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body
+{
+   font-family:sans-serif;
+}
+.menu-bar
+{
+    background: linear-gradient(to right, #a517ba,#5f1782);
+    text-align:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.menu-bar .logo
+{
+
+    text-decoration:none;
+    list-style:none;
+    color:white;
+    margin: 10px 15px 15px 10px;
+}
+
+.menu-bar ul /*dropdown icon*/
+{
+    display:inline-flex;
+    list-style:none;
+    color:white;
+}
+.menu-bar ul li
+{
+    width:120px;
+    margin:15px;
+    padding:5px;
+}
+.menu-bar ul li a /*the 4 title*/
+{
+    text-decoration:none;
+    color:white;
+}
+.active, .menu-bar ul li:hover
+{
+    background-color:plum;
+    border-radius:3px;
+}
+.sub-menu-1
+{
+    display:none;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display:block;
+    position:absolute;
+    background: linear-gradient(to right, #a517ba,#5f1782);
+    margin-top:8px;
+    margin-left:-15px;
+    z-index:100;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display:block;
+    margin:10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width:150px;
+    padding:10px;
+    border-bottom:1px dotted #fff;
+    background:transparent;
+    border-radius:0;
+    text-align:left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom:none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+    color:black;
+}
+.fa-arrow-right
+{
+    float:right;
+}
+.sub-menu-2
+{
+    display:none;
+}
+.over-me:hover .sub-menu-2
+{
+    position:absolute;
+    display:block;
+    margin-top:-40px;
+    margin-left:140px;
+    background:linear-gradient(to right, #a517ba,#5f1782);
+}
+.fa-sort-desc
+{
+    float:right;
+}
+
+
+/*-------------------------------home start-----------------------------*/
+
+#home
+{
+    background:#f8f9fa;
+    padding-bottom:50px;
+    padding-top:50px;
+}
+.service-img
+{
+    width: 80px;
+    margin-top: 20px;
+}
+.services
+{
+    padding: 10px;
+}
+.services h4
+{
+    padding: 5px;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+.title::before
+{
+    content: '';
+    background: #7b1798;
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    transform: translateY(63px);
+}
+#services .btn-primary
+{
+    box-shadow:none;
+    padding: 8px 25px;
+    border:none;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------footer start-----------------------------*/
+#footer
+{
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+    color:#fff;
+}
+#footer p
+{
+    font-size:12px;
+}
+.footer-img
+{
+    width:100%;
+}
+.footer-box
+{
+    padding:20px;
+}
+.footer-box img
+{
+    width:250px;
+    margin-bottom:20px;
+}
+.footer-box .fa
+{
+    margin-right:8px;
+    font-size:25px;
+    height:30px;
+    width:30px;
+    text-align:center;
+    padding-top:3px;
+    border-radius:2px;
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+}
+.footer-box .form-control
+{
+    box-shadow:none !important;
+    border:none;
+    border-radius:0;
+    margin-top:25px;
+    max-width:250px;
+}
+.footer-box .btn-primary
+{
+    box-shadow:none !important;
+    border:none;
+    border-radius:0;
+    margin-top:30px;
+    background-image:linear-gradient(to right, #a517ba,#5f1782);
+}
+hr
+{
+    background-color:#fff;
+}
+.copyright
+{
+    margin-bottom:0;
+    padding-bottom:20px;
+    text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
