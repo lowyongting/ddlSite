@@ -404,10 +404,10 @@
     </tr>
 	  <tr>  
   
-  Comfirm to submit?
+  Confirm to submit?
 
 
-    <td colspan="2"><input type="submit" name="submit" value="Yes"></td>
+    <td colspan="2"><input type="submit" name="submit" value="Submit"></td>
 	
 	  <script src="CSS/bootstrap-validate.js"></script>
 

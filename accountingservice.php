@@ -1,6 +1,5 @@
 <?php 
 require_once 'controllers/authController.php'; 
-
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +13,6 @@ require_once 'controllers/authController.php';
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/accountingstyle.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -31,7 +29,13 @@ require_once 'controllers/authController.php';
 </head>
 
 <body>
-  
+  <?php
+      $query = "SELECT service FROM accountingservices";
+      $stmt = $conn->prepare($query);
+      $stmt->execute();
+      $result = $stmt->get_result();
+      $row = $result->fetch_assoc();
+  ?>
     <div class="menu-bar">
       <a class="logo" href="index.php">DDL ASSOCIATES FIRM</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -149,38 +153,47 @@ require_once 'controllers/authController.php';
 <!-------------------CONTENT START----------------------------->
 
 <section id="services">
-    <div class="container text-center">
+    <div class="container-fluid text-center">
     <h1 class="title ">ACCOUNTING</h1>
-    <div class="row text-center">
-    <div class="col-md-4 services">
-    <img src="images/1.png" class="service-img" alt="Error when displaying image">
-    <h4>Bookkeeping Service</h4>
-            <ul>
-                <li>Full Scope</li>
-                <li>Monthly, Quarterly & Yearly for Active and Dormant Company</li>
-            </ul>
+        <div class="row text-center bg-light">
+            <div class="col-md-12 services">
+            <img src="images/1.png" class="service-img" alt="Error when displaying image">
+            <h4>Bookkeeping Service</h4>
+                  <p> <?php echo $row['service']; ?> </p>
+                  <p> <?php 
+                  $row = $result->fetch_assoc();
+                  echo $row['service']; ?> </p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-12 services">
+            <img src="images/1.png" class="service-img" alt="Error when displaying image">
+            <h4>Accounting</h4>
+                  <p> <?php 
+                  $row = $result->fetch_assoc();
+                  echo $row['service']; ?> </p>
+                  <p> <?php 
+                  $row = $result->fetch_assoc();
+                  echo $row['service']; ?> </p>
+                  <p> <?php 
+                  $row = $result->fetch_assoc();
+                  echo $row['service']; ?> </p>
+            </div>
+        </div>
+        <div class="row text-center bg-light">
+            <div class="col-md-12 services">
+            <img src="images/1.png" class="service-img" alt="Error when displaying image">
+            <h4>Others Service</h4>
+                  <p> <?php 
+                  $row = $result->fetch_assoc();
+                  echo $row['service']; ?> </p>
+                  <p> <?php 
+                  $row = $result->fetch_assoc();
+                  echo $row['service']; ?> </p>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4 services">
-    <img src="images/1.png" class="service-img" alt="Error when displaying image">
-    <h4>Accounting</h4>
-            <ul>
-                <li>Set Up Accounting System</li>
-                <li>Preparation of full sets of Accounts for Audit Purposes</li>
-                <li>Preparation of customized management account and report</li>
-            </ul>
-    </div>
-    <div class="col-md-4 services">
-    <img src="images/1.png" class="service-img" alt="Error when displaying image">
-    <h4>Others Service</h4>
-            <ul>
-                <li>Payroll services</li>
-                <li>General accounting advisory</li>
-            </ul>
-    </div>
-    </div>
-    
-    </div>
-    </section>
+</section>
     
     
     <!-------------------FOOTER START----------------------------->

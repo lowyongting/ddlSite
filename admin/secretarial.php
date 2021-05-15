@@ -1,5 +1,9 @@
 <?php
   include 'actionSec.php';
+  if(!isset($_SESSION['admin_id'])) {
+    header("location: ../adminlogin.php");
+  }
+  
   include('master/header.php'); 
   include('master/navbar.php'); 
 ?>
@@ -24,6 +28,7 @@
           $stmt = $conn->prepare($query);
           $stmt->execute();
           $result = $stmt->get_result();
+          $row_no = 1;
         ?>
         <h3 class="text-center text-info">Secretarial Service Info</h3>
         <table class="table table-hover" id="data-table">
@@ -37,7 +42,7 @@
           <tbody>
             <?php while ($row = $result->fetch_assoc()) { ?>
             <tr>
-              <td><?= $row['id']; ?></td>
+              <td><?= $row_no; ?></td>
               <td style="width:920px;"><?= $row['services']; ?></td>
               <td>
 
@@ -52,10 +57,10 @@
               
               </td>
             </tr>
-            <?php } ?>
+            <?php $row_no += 1; } ?>
             <tr>
                 <td> <a href="editSecretarial.php" class="badge badge-primary p-2">Add Data</a> </td>
-                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> 
+                <td></td> <td></td> <td></td> 
             </tr>
           </tbody>
         </table>

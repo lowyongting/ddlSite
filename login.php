@@ -16,6 +16,38 @@ require_once 'controllers/authController.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>User Login</title>
+    <style>
+        input[type=text],  
+        input[type=password] {  
+            width: 100%;  
+            padding: 12px 50px;  
+            margin: 0;  
+            display: inline-block;  
+            border: 1px solid #ccc;  
+            box-sizing: border-box;  
+        }  
+        .fontuser { 
+            position: relative; 
+        } 
+          
+        .fontuser i{ 
+            position: absolute; 
+            left: 20px; 
+            top: 50px; 
+            color: gray; 
+        } 
+          
+        .fontpassword { 
+            position: relative; 
+        } 
+          
+        .fontpassword i{ 
+            position: absolute; 
+            left: 20px; 
+            top: 50px; 
+            color: gray; 
+        } 
+    </style>
 </head>
 
 <body>
@@ -71,7 +103,7 @@ require_once 'controllers/authController.php';
             <div class= "col-md-4 offset-md-4 form-div login" >
                 <form action="login.php" method="post">
                 <h2 style="font-weight:bold; text-align:center;">Login</h2>
-                <img src="images/companylogo.jpg" alt="Error when displaying image" class="w3-image" width="500" height="200">
+                <img src="images/companylogo.jpg" alt="Error when displaying image" class="w3-image" width="500" height="120">
                         
                     <?php if (count($errors)>0): ?> 
                         <div class="alert alert-danger">
@@ -81,18 +113,20 @@ require_once 'controllers/authController.php';
                         </div>
                             <?php endif; ?>
 
-                        <div class = "form-group">
+                        <div class = "form-group fontuser">
                            <label for="username">Username or Email</label>
-                            <input type="text" <?php echo $username; ?> class="form-control form-control-lg" name="username">
+                            <input type="text" <?php echo $username; ?> class="form-control form-control-lg rounded-pill" name="username" placeholder="username / email">
+                            <i class="fa fa-user fa-lg"></i> 
                         </div>
                         
-                        <div class = "form-group">
+                        <div class = "form-group fontpassword">
                            <label for="password">Password</label>
-                            <input type="password" class="form-control form-control-lg" name="password">
+                            <input type="password" class="form-control form-control-lg rounded-pill" name="password" placeholder="password">
+                            <i class="fa fa-lock fa-lg"></i> 
                         </div>
                         
                         <div class = "form-group">
-                            <button type="submit" name="login-btn" class="btn btn-primary btn-block btn-lg">Login</button>
+                            <button type="submit" name="login-btn" class="btn btn-primary btn-block btn-lg rounded-pill">Login</button>
                         </div>
                         <p class="text-center">Not yet a member? <a href="signup.php">Sign Up</a></p>
                         <p class="text-center">Are you an admin? <a href="adminlogin.php">Admin Page</a></p>

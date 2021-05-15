@@ -75,25 +75,14 @@ require_once 'controllers/authController.php';
 </div>
 
 <!-------------------HOME START----------------------------->
-<div class="container" style="margin-top:30px">
-  <div class="row">
-    <div class="col-sm-4">
-      <h2>About Us</h2>
-      <h5>Photo of me:</h5>
-      <div><img src="images/people.jpg" class="fakeimg"></div>
-      <br>
-      <p>We provide services of Company formation / Company incorporation in Malaysia. The most common type of company used is a company limited by shares; it may be 
-          incorporated as a private limited company or public limited company. You can count on our expertise for your 
-          business setting-up needs. Besides Company formation / Company incorporation, we are able to provide ready made companies or 
-          incorporation of Shelf Company for clients seeking to set-up businesses within 24 hours in Malaysia. This includes the change of ownerships as per the clients' requirements. Our team of 
-          dedicated professionals has been assuming responsibilities in supporting our clients from various businesses and industries. We are at all times striving for professional competency and 
-          exhibit a high level of skill and proficiency in the performance of our duties as Company Secretarial Consultants.</p>
-      
-    
-    </div>
-    <div class="col-sm-8">
-      <h2>COMPANY SECRETERIAL</h2>
-      <div><img src="images/companysec.jpg" class="fakeimg" width=700px></div>
+<div class="container-fluid">
+  <div class="row m-3">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 p-3">
+      <div class="text-center">
+        <h2>COMPANY SECRETERIAL</h2>
+        <div><img src="images/companysec.jpg" class="fakeimg" width=700px></div>
+      </div>
       <br>
       <p>Must for every company to appoint Company Secretary within 30 days from company incorporation. 
         Penalty would entail by Companies Commission of Malaysia (CCCM) if fails to do so.
@@ -105,6 +94,24 @@ require_once 'controllers/authController.php';
       <li>Striking off and winding up Company</li>
       <li>Company Searches and Bankruptcy Searches</li>
     </div>
+    <div class="col-sm-2"></div>
+  </div>
+  <div class="row bg-light">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 m-3 p-3">
+      <div class="text-center">
+        <h2>About Us</h2>
+        <div><img src="images/people.jpg" class="fakeimg"></div>
+      </div>
+      <br>
+      <p class="text-center">We provide services of Company formation / Company incorporation in Malaysia. The most common type of company used is a company limited by shares; it may be 
+          incorporated as a private limited company or public limited company. You can count on our expertise for your 
+          business setting-up needs. Besides Company formation / Company incorporation, we are able to provide ready made companies or 
+          incorporation of Shelf Company for clients seeking to set-up businesses within 24 hours in Malaysia. This includes the change of ownerships as per the clients' requirements. Our team of 
+          dedicated professionals has been assuming responsibilities in supporting our clients from various businesses and industries. We are at all times striving for professional competency and 
+          exhibit a high level of skill and proficiency in the performance of our duties as Company Secretarial Consultants.</p>
+    </div>
+    <div class="col-sm-2"></div>
   </div>
 </div>
     

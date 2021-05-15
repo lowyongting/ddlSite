@@ -62,9 +62,9 @@ if(isset($_POST['adminsignup-btn'])){
     if ($stmt->execute()) {
         // login user
         $user_id = $conn->insert_id;
-        $_SESSION['id'] = $user_id;
-        $_SESSION['username'] = $username;
-        $_SESSION['email'] = $email;
+        $_SESSION['admin_id'] = $user_id;
+        $_SESSION['admin_username'] = $username;
+        $_SESSION['admin_email'] = $email;
 
 
         // set flash message
@@ -113,13 +113,13 @@ if(isset($_POST['adminlogin-btn'])){
 
             if ($password === $passwords) {
                 // login success
-                $_SESSION['id'] = $user['id'];
-                $_SESSION['username'] = $user['username'];
-                $_SESSION['email'] = $user['email'];
+                $_SESSION['admin_id'] = $user['id'];
+                $_SESSION['admin_username'] = $user['username'];
+                $_SESSION['admin_email'] = $user['email'];
                 // set flash message
                 $_SESSION['message'] = "You are now logged in!";
                 $_SESSION['alert-class'] = "alert-success";
-                header('location: admin/accounting.php');
+                header('location: admin/index.php');
                 exit();
         
             } else {
@@ -137,9 +137,9 @@ if(isset($_POST['adminlogin-btn'])){
 
 if (isset($_GET['logout'])) {
     session_destroy();
-    unset($_SESSION['id']);
-    unset($_SESSION['username']);
-    unset($_SESSION['email']);
+    unset($_SESSION['admin_id']);
+    unset($_SESSION['admin_username']);
+    unset($_SESSION['admin_email']);
     unset($_SESSION['verify']);
     header('location: adminlogin.php');
     exit();

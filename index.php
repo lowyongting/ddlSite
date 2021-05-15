@@ -157,7 +157,7 @@ require_once 'controllers/authController.php';
       it may be incorporated as a private limited company or public limited company.</p>
     </div>
     </div>
-      <button type="button" class="btm btn-primary">All Services</button>
+      <button type="button" class="w3-btn w3-round-xlarge w3-purple w3-hover-light-blue w3-padding-large w3-large w3-margin-top">All Services</button>
     
     </div>
     </section>
@@ -169,7 +169,7 @@ require_once 'controllers/authController.php';
         
           <h1>Start your business as a Sdn Bhd in Malaysia.</h1>
           <h5 class="w3-padding-32">Submit your incorporation form in 20 minutes. Get your Sdn Bhd approved in 3 - 5 working days.</h5>
-          <button id="btnCorporate" class="w3-btn w3-round-xlarge w3-indigo w3-hover-light-blue w3-padding-large w3-large w3-margin-top">Start incorporating</button> 
+          <button id="btnCorporate" class="w3-btn w3-round-xlarge w3-purple w3-hover-light-blue w3-padding-large w3-large w3-margin-top">Start incorporating</button> 
 
       </div>
     </div>
@@ -183,7 +183,7 @@ require_once 'controllers/authController.php';
       <div class="social-icons">
         <a href="#"><img src="images/whatsapp.png"></a>
         <a href="#"><img src="images/facebook.jpg"></a>
-        <a href="#"><img src="images/gmail.jpg"></a>
+        <a href="mailto:ddl@ddlassociates.com.my"><img src="images/gmail.jpg"></a>
       </div>
     </div>
     </section>

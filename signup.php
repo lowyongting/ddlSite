@@ -14,6 +14,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Register</title>
 
+    <style>
+        input[type=text],  
+        input[type=password],
+        input[type=email] {  
+            width: 100%;  
+            padding: 12px 50px;  
+            margin: 0;  
+            display: inline-block;  
+            border: 1px solid #ccc;  
+            box-sizing: border-box;  
+        }  
+        .fontuser { 
+            position: relative; 
+        } 
+          
+        .fontuser i{ 
+            position: absolute; 
+            left: 20px; 
+            top: 50px; 
+            color: gray; 
+        } 
+          
+        .fontpassword { 
+            position: relative; 
+        } 
+          
+        .fontpassword i{ 
+            position: absolute; 
+            left: 20px; 
+            top: 50px; 
+            color: gray; 
+        } 
+    </style>
 </head>
 
 <body>
@@ -70,7 +103,7 @@
                 <form action="signup.php" method="post">
 
                 <h2 style="font-weight:bold; text-align:center;">Sign Up</h2>
-                <img src="images/companylogo.jpg" alt="Error when displaying image" class="w3-image" width="500" height="200">
+                <img src="images/companylogo.jpg" alt="Error when displaying image" class="w3-image" width="500" height="120">
 
                         <?php if (count($errors)>0): ?> 
                         <div class="alert alert-danger">
@@ -80,24 +113,28 @@
                         </div>
                             <?php endif; ?>
 
-                        <div class = "form-group">
+                        <div class = "form-group fontuser">
                            <label for="username">Username</label>
-                            <input type="text" value= "<?php echo $username; ?>"class="form-control form-control-lg" name="username">
+                            <input type="text" value= "<?php echo $username; ?>"class="form-control form-control-lg rounded-pill" name="username" placeholder="username">
+                            <i class="fa fa-user fa-lg"></i> 
                         </div>
-                        <div class = "form-group">
+                        <div class = "form-group fontuser">
                            <label for="email">Email</label>
-                            <input type="email" value= "<?php echo $email; ?>" class="form-control form-control-lg" name="email">
+                            <input type="email" value= "<?php echo $email; ?>" class="form-control form-control-lg rounded-pill" name="email" placeholder="email">
+                            <i class="fa fa-envelope fa-lg"></i>
                         </div>
-                        <div class = "form-group">
+                        <div class = "form-group fontpassword">
                            <label for="password">Password</label>
-                            <input type="password" class="form-control form-control-lg" name="password">
+                            <input type="password" class="form-control form-control-lg rounded-pill" name="password" placeholder="password">
+                            <i class="fa fa-lock fa-lg"></i>
                         </div>
-                        <div class = "form-group">
+                        <div class = "form-group fontpassword">
                            <label for="passwordConf">Confirm Password</label>
-                            <input type="password" class="form-control form-control-lg" name="passwordConf">
+                            <input type="password" class="form-control form-control-lg rounded-pill" name="passwordConf" placeholder="confirm password">
+                            <i class="fa fa-check-circle fa-lg"></i>
                         </div>
                         <div class = "form-group">
-                            <button type="submit" name="signup-btn" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+                            <button type="submit" name="signup-btn" class="btn btn-primary btn-block btn-lg rounded-pill">Sign Up</button>
                         </div>
                         <p class="text-center">Already a member? <a href="login.php">Sign In</a></p>
 

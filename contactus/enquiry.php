@@ -25,6 +25,25 @@
     .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
     .fa-anchor,.fa-coffee {font-size:200px}
 
+        input[type=text],  
+        input[type=tel] {  
+            width: 100%;  
+            padding: 12px 50px;  
+            margin: 0;  
+            display: inline-block;  
+            border: 1px solid #ccc;  
+            box-sizing: border-box;  
+        }  
+        .fontuser { 
+            position: relative; 
+        } 
+          
+        .fontuser i{ 
+            position: absolute; 
+            left: 20px; 
+            top: 48px; 
+            color: gray; 
+        } 
     </style>
 </head>
 
@@ -96,32 +115,37 @@
                 <form id="myForm">
                     <h2 style="font-weight:bold; text-align:center;">Enquiry Form</h2>
 
-                    <div class = "form-group">
-                        <label>Name</label>
-                        <input id="name" type="text" placeholder="Enter Name" class="form-control" required>
+                    <div class = "form-group fontuser">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" placeholder="Enter Name" class="form-control form-control-lg rounded-pill" required>
+                        <i class="fa fa-address-card fa-lg"></i>
+                    </div>
+
+                    <div class = "form-group fontuser">
+                        <label for="email">Email</label>
+                        <input id="email" type="text" placeholder="Enter Email" class="form-control form-control-lg rounded-pill" required>
+                        <i class="fa fa-envelope fa-lg"></i>
+                    </div>
+
+                    <div class = "form-group fontuser">
+                        <label for="phone">Phone</label>
+                        <input id="phone" type="tel" placeholder="Enter Phone Number" class="form-control form-control-lg rounded-pill" pattern="[0-9]{3}-[0-9]{7}" required>
+                        <i class="fa fa-phone fa-lg"></i>
+                    </div>
+
+                    <div class = "form-group fontuser">
+                        <label for="subject">Subject</label>
+                        <input id="subject" type="text" placeholder=" Enter Subject" class="form-control form-control-lg rounded-pill" required> 
+                        <i class="fa fa-header fa-lg"></i>
                     </div>
 
                     <div class = "form-group">
-                        <label>Email</label>
-                        <input id="email" type="text" placeholder="Enter Email" class="form-control" required>
+                        <label for="body">Message</label>
+                        <textarea id="body" rows="5" placeholder="Type Message" class="form-control form-control-lg" required></textarea>
                     </div>
 
-                    <div class = "form-group">
-                        <label>Phone</label>
-                        <input id="phone" type="tel" placeholder="Enter Phone Number" class="form-control" pattern="[0-9]{3}-[0-9]{7}" required>
-                    </div>
-
-                    <div class = "form-group">
-                        <label>Subject</label>
-                        <input id="subject" type="text" placeholder=" Enter Subject" class="form-control" required> 
-                    </div>
-
-                    <div class = "form-group">
-                        <label>Message</label>
-                        <textarea id="body" rows="5" placeholder="Type Message" class="form-control" required></textarea>
-                    </div>
-
-                    <button type="button" class="w3-btn w3-round-xlarge w3-teal w3-padding-large btn-block" onclick="sendEmail()" value="Send An Email">Submit</button> 
+                    <button type="button" class="w3-btn w3-round-xlarge w3-teal w3-padding-large btn-block rounded-pill" onclick="sendEmail()" value="Send An Email">Submit
+                    <i class="fa fa-paper-plane fa-lg"></i></button> 
                 </form>
             </div>
 	    </div>
